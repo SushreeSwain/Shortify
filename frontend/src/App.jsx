@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import URLForm from "./components/URLForm";
 import Stats from "./components/Stats";
 import Analytics from "./components/Analytics"; 
+import Documentation from "./components/Documentation";
 
 function HomePage() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/analytics" element={<Analytics />} />         {/* NEW ROUTE */}
           <Route path="/analytics/:shortId" element={<Analytics />} /> {/* EXISTING ROUTE */}
+          <Route path="/documentation" element={<Documentation />} />
         </Routes>
 
         <Footer />

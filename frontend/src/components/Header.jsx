@@ -17,9 +17,9 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#documentation" className="text-gray-300 hover:text-white">
-                Documentation
-              </a>
+              <Link to="/documentation" className="text-gray-300 hover:text-white">
+                  Documentation
+              </Link>
             </li>
             <li>
               <a href="#about" className="text-gray-300 hover:text-white">
