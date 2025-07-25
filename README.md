@@ -22,14 +22,13 @@ You can use it to shorten long links, track how many times they were visited, se
 - Clicking on the short URL automatically redirects to the original site.
 
 ### 📈 Analytics
-- Track how many times each short URL was visited.
 - Check global stats like total URLs and total visits.
 - See full info for each short link (original URL, visits, expiry, etc).
 
 ### 📷 QR Code Generator
 - Generate a QR code for your short URL using a simple link like `/qr/:shortId`.
 - It shows up directly in Postman or browser (PNG image).
-- No saving needed — just download and share!
+- No saving needed, just download and share!
 
 ---
 
@@ -39,6 +38,9 @@ You can use it to shorten long links, track how many times they were visited, se
 - MongoDB + Mongoose
 - Nanoid (for short link generation)
 - QRCode (for creating QR codes)
+- React.js + Axios
+- Tailwindcss + HTML
+- Tools Used : Postman + MongoDB Compass
 
 ---
 
@@ -62,7 +64,7 @@ You can use it to shorten long links, track how many times they were visited, se
 
 ## 📌 Notes
 
-- This app does **not** save QR codes — it just shows them when needed.
+- This app does **not** save QR codes, it just shows them when needed.
 - No login or signup is required.
 - You can add features like user accounts later if you want.
 
