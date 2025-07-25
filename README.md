@@ -81,6 +81,10 @@ You can use it to shorten long links, track how many times they were visited, se
 
 Made with ❤️ using Node.js
 
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
 
 # Node.js + Project Setup Guide (for future me 👩‍💻)
 
@@ -126,3 +130,4 @@ When I access `http://localhost:5000`, it's only on my own machine.
 
 - `localhost` = 127.0.0.1 (loopback IP)
 - Port `5000` = door to my server
+
