@@ -19,6 +19,7 @@ const Documentation = () => {
         <li>Users can shorten URLs using any custom name, if not then we can generate a random short URL.</li>
         <li>After creating a short URL, users can click on the "Generate QR Code" if they want to. The QR Code can be downloaded as an png image file.</li>
         <li>We track the total number of URLs generated as well as how many short URLs have been visited.</li>
+        <li>Users can visit the Analytics page to check details about any short URL that has been generated on Shortify. We provide details on what is the original URL, when it was created, when is the expiry date and how many times has that particular short URL been visited.</li>
         <li>In case users want the short link to be temporarily available we do have a feature that lets users choose any given date in the future, if not the generated URL will not have any expiration date.  </li>
         <li>In case users type in any wrong URL, they will be automatically redirected to a 404 error page. If any URL is expired, users will be redirected to a 410 error page. They can return to the homepage in both scenarios and generate another valid short URL.</li>
       </ul>
