@@ -8,14 +8,14 @@ const Documentation = () => {
         ← Go Back
       </Link>
 
-      <h1 className="text-3xl font-bold mb-4">📄 Documentation</h1>
+      <h1 className="text-4xl font-bold mb-4 leading-12">Documentation</h1>
 
-      <p className="mb-4">
+      <p className=" text-xl mb-4 leading-10">
         This is a beginner-friendly URL shortener project built using Node.js, Express.js, MongoDB for the backend, and Vite + React with Tailwind CSS for the frontend.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">🔗 Features</h2>
-      <ul className="list-disc list-inside mb-4">
+      <h2 className="text-3xl font-semibold mt-6 mb-2 leading-12">Features</h2>
+      <ul className=" text-xl list-disc list-inside mb-4 leading-10">
         <li>Shorten URLs with random or custom aliases</li>
         <li>Generate QR codes for shortened URLs</li>
         <li>Track number of visits and URLs created</li>
@@ -23,32 +23,44 @@ const Documentation = () => {
         <li>404 and Expired page redirection</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">🚀 Tech Stack</h2>
-      <ul className="list-disc list-inside mb-4">
-        <li>Frontend: React + Vite + Tailwind CSS</li>
+      <h2 className="text-3xl font-semibold mt-6 mb-2 leading-12">Tech Stack</h2>
+      <ul className="text-xl list-disc list-inside mb-4 leading-10">
+        <li>Frontend: React + Vite + Tailwind CSS + HTML</li>
         <li>Backend: Node.js + Express</li>
         <li>Database: MongoDB</li>
-        <li>Other: QR Code library, dotenv, nodemon</li>
+        <li>Modules Used: qrcode, nanoid</li>
+        <li>Tools: MongoDB Compass, Postman</li>
       </ul>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">📂 Project Structure</h2>
-      <pre className="bg-gray-100 p-4 rounded text-sm overflow-x-auto">
+      <h2 className="text-3xl font-semibold mt-6 mb-2 leading-12">Project Structure</h2>
+      <pre className="bg-gray-100 p-4 rounded text-sm overflow-x-auto leading-6">
 {`
+/.git
+README.md
+LICENSE
+.gitignore
 /frontend
-  /src
-    /components
-    App.jsx
-    main.jsx
+    README.md
+    /public
+    /src
+        /components
+            Home page files
+        App.jsx
+        main.jsx
 /backend
-  /models
-    Url.js
-  server.js
-  .env
+    README.md
+    /public
+        /html page for non-existent URL
+        /html page for expiry 
+    /models
+        Url.js
+    server.js
+    .env
 `}
       </pre>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-2">📘 Learn More</h2>
-      <p className="mb-4">
+      <h2 className="text-3xl font-semibold mt-6 mb-2 leading-12">📘 Learn More</h2>
+      <p className="text-xl mb-4 leading-10">
         This is just a basic overview. To view the complete documentation, including deployment, command breakdowns, and diagrams, visit the full documentation on GitHub:
         <br />
         <a

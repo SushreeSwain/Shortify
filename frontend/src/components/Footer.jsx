@@ -9,7 +9,7 @@ function Footer() {
 
       {/* Social Links */}
       <div className="flex justify-center gap-4 mb-4">
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/sushree-swain/" target="_blank" rel="noopener noreferrer">
           <img
             alt="LinkedIn"
             height="36"
@@ -17,7 +17,7 @@ function Footer() {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
           />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/SushreeSwain" target="_blank" rel="noopener noreferrer">
           <img
             alt="GitHub"
             height="36"
