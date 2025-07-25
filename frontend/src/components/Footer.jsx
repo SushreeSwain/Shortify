@@ -6,6 +6,18 @@ function Footer() {
       {/* Website name*/}
       <div className="text-gray-900 font-semibold text-2xl mb-2">Shortify</div>
       <div className="text-gray-500 text-md mb-4">Your hassle-free URL Shortener</div>
+      {/* License */}
+      <div className="text-gray-400 text-sm">
+          © 2025 Shortify. Licensed under{' '}
+          <a
+            href="https://opensource.org/licenses/MIT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline leading-10"
+          >
+            MIT License
+          </a>.
+      </div>
 
       {/* Social Links */}
       <div className="flex justify-center gap-4 mb-4">

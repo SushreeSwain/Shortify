@@ -86,9 +86,9 @@ Made with ❤️ using Node.js
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 
-# Node.js + Project Setup Guide (for future me 👩‍💻)
+# Node.js + Project Setup Guide
 
-This guide documents the basic project setup for any Node.js-based app like a URL shortener, so I can repeat this easily in the future.
+This guide documents the basic project setup for any Node.js-based app like a URL shortener, so you can repeat this easily in the future.
 
 
 ## 🛠️ Prerequisites
@@ -126,8 +126,9 @@ code .
 
 ## 🔒 What is Localhost?
 
-When I access `http://localhost:5000`, it's only on my own machine.
+When you access `http://localhost:5000`, it's only on your own machine.
 
 - `localhost` = 127.0.0.1 (loopback IP)
-- Port `5000` = door to my server
+- Port `5000` = door to your server
+- Same with any other port you are using. 
 
