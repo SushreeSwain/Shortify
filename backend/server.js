@@ -30,44 +30,55 @@ app.get('/', (req, res) => {
 //POST for /shorten
 app.post('/shorten', async (req, res) => {
   try {
-    const { longUrl, expiry, customId } = req.body; 
+    const { longUrl, expiry, customId } = req.body;
 
-    if (!longUrl) {
-      return res.status(400).json({ error: 'URL is required' }); 
+    // 1. Validate URL format (must start with https://)
+    const urlRegex = /^https:\/\/[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\/.*)?$/;
+    if (!longUrl || !urlRegex.test(longUrl)) {
+      return res.status(400).json({ error: 'Please enter a valid URL starting with https://' });
     }
 
-    //CUSTOM URL
+    //  2. Validate expiry (if provided)
+    if (expiry) {
+      const expiryDate = new Date(expiry);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // ignore current time for comparison
+
+      if (expiryDate <= today) {
+        return res.status(400).json({ error: 'Expiry date must be in the future' });
+      }
+    }
+
+    // 3. Handle custom URL
     let shortId;
-
     if (customId) {
-        const existing = await Url.findOne({ shortId: customId });
-
-        if (existing) {
-            return res.status(409).json({ error: 'Custom short URL is already taken' });
-        }
-        shortId = customId;
-
+      const existing = await Url.findOne({ shortId: customId });
+      if (existing) {
+        return res.status(409).json({ error: 'Custom short URL is already taken' });
+      }
+      shortId = customId;
     } else {
-        shortId = nanoid(8);
+      shortId = nanoid(8);
     }
 
-    const shortUrl = `https://shortify-5jt3.onrender.com/${shortId}`; 
+    // 4. Create the short URL entry
+    const shortUrl = `https://shortify-5jt3.onrender.com/${shortId}`;
     const newUrl = new Url({
       longUrl,
       shortUrl,
       shortId,
       createdAt: new Date(),
       useCount: 0,
-      expiry: expiry ? new Date(expiry) : null 
-    }); 
+      expiry: expiry ? new Date(expiry) : null
+    });
 
-    await newUrl.save(); 
+    await newUrl.save();
 
-    res.status(201).json({ shortUrl }); 
+    res.status(201).json({ shortUrl });
 
   } catch (error) {
     console.error('Error creating short URL:', error);
-    res.status(500).json({ error: 'Server error' }); 
+    res.status(500).json({ error: 'Server error' });
   }
 });
 
