@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,24 +12,52 @@ function Header() {
         <nav>
           <ul className="flex space-x-6">
             <li>
-              <a href="#features" className="text-gray-300 hover:text-white">
-                Features
-              </a>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-gray-300 hover:text-white"
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/documentation" className="text-gray-300 hover:text-white">
-                  Documentation
-              </Link>
+              <NavLink
+                to="/documentation"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-gray-300 hover:text-white"
+                }
+              >
+                Documentation
+              </NavLink>
             </li>
             <li>
-              <a href="#about" className="text-gray-300 hover:text-white">
-                About
-              </a>
+              <NavLink
+                to="/stats"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-gray-300 hover:text-white"
+                }
+              >
+                Stats
+              </NavLink>
             </li>
             <li>
-              <Link to="/analytics" className="text-gray-300 hover:text-white">
+              <NavLink
+                to="/analytics"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-gray-300 hover:text-white"
+                }
+              >
                 Analytics
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

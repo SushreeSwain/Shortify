@@ -44,15 +44,19 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800">
+        {/*  Header stays across all pages */}
         <Header />
 
+        {/*  All routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/analytics" element={<Analytics />} />         {/* NEW ROUTE */}
-          <Route path="/analytics/:shortId" element={<Analytics />} /> {/* EXISTING ROUTE */}
-          <Route path="/documentation" element={<Documentation />} />
+          <Route path="/analytics" element={<Analytics />} />         
+          <Route path="/analytics/:shortId" element={<Analytics />} />
+          <Route path="/documentation" element={<Documentation />} />  {/* ✅ FIXED */}
+          <Route path="/stats" element={<Stats />} />         {/* ✅ NEW */}
         </Routes>
 
+        {/*  Footer stays across all pages */}
         <Footer />
       </div>
     </Router>
