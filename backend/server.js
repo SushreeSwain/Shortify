@@ -51,7 +51,9 @@ app.post('/shorten', async (req, res) => {
         shortId = nanoid(8);
     }
 
-    const shortUrl = `http://localhost:5000/${shortId}`; 
+    
+    const BASE_URL = process.env.BASE_URL || "http://localhost:5000";
+    const shortUrl = `${BASE_URL}/${shortId}`;
     const newUrl = new Url({
       longUrl,
       shortUrl,
