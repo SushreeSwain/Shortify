@@ -35,7 +35,7 @@ app.post('/shorten', async (req, res) => {
     // 1. Validate URL format (must start with https://)
     const urlRegex = /^https:\/\/[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\/.*)?$/;
     if (!longUrl || !urlRegex.test(longUrl)) {
-      return res.status(400).json({ error: 'Please enter a valid URL starting with https://' });
+      return res.status(400).json({ error: 'Please enter a valid URL' });
     }
 
     //  2. Validate expiry (if provided)
