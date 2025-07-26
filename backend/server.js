@@ -51,9 +51,7 @@ app.post('/shorten', async (req, res) => {
         shortId = nanoid(8);
     }
 
-    
-    const BASE_URL = process.env.BASE_URL || "http://localhost:5000";
-    const shortUrl = `${BASE_URL}/${shortId}`;
+    const shortUrl = `https://shortify-5jt3.onrender.com/${shortId}`; 
     const newUrl = new Url({
       longUrl,
       shortUrl,
