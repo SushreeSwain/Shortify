@@ -24,7 +24,7 @@ function URLForm() {
     setCopySuccess("");
 
     try {
-      const res = await axios.post("http://localhost:5000/shorten", {
+      const res = await axios.post("https://shortify-5jt3.onrender.com/shorten", {
         longUrl,
         expiry,
         customId: customId || undefined,
@@ -56,7 +56,7 @@ function URLForm() {
       return;
     }
 
-    setQrCodeUrl(`http://localhost:5000/qr/${shortId}`);
+    setQrCodeUrl(`https://shortify-5jt3.onrender.com/qr/${shortId}`);
   };
 
   const handleDownloadQR = () => {

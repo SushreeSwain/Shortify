@@ -15,7 +15,7 @@ function Analytics() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get(`http://localhost:5000/analytics/${shortId}`);
+      const res = await axios.get(`https://shortify-5jt3.onrender.com/analytics/${shortId}`);
       setData(res.data);
     } catch (err) {
       console.error("Analytics fetch error:", err);

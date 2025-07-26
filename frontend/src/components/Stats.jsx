@@ -9,7 +9,7 @@ function Stats() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/stats");
+        const res = await axios.get("https://shortify-5jt3.onrender.com/stats");
         setStats(res.data);
       } catch (err) {
         console.error("Error fetching stats:", err);
